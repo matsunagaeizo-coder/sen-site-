@@ -319,10 +319,11 @@ p.en{padding-top:2px;}
 /* -------- mobile nav -------- */
 @media (max-width:800px){
   .nav-toggle{display:block;}
+  .nav-toggle.is-open span{background:var(--ink);}
   nav.main-nav{
     position:fixed;top:76px;left:0;right:0;bottom:0;
     z-index:100;
-    background:#ffffff;
+    background:var(--ink);
     opacity:1;
     visibility:hidden;
     transform:translateY(-8px);
@@ -336,5 +337,9 @@ p.en{padding-top:2px;}
     transition:transform .25s ease;
   }
   nav.main-nav ul{flex-direction:column;gap:28px;}
-  nav.main-nav a{font-size:20px;font-family:var(--serif);}
+  nav.main-nav a{
+    font-size:22px;font-family:var(--serif);
+    color:#ffffff;
+  }
+  nav.main-nav a::after{background:#ffffff;}
 }
