@@ -321,22 +321,17 @@ p.en{padding-top:2px;}
   .nav-toggle{display:block;}
   .nav-toggle.is-open span{background:var(--ink);}
   nav.main-nav{
+    display:none;
     position:fixed;top:76px;left:0;right:0;bottom:0;
     z-index:100;
     background:var(--ink);
-    opacity:1;
-    visibility:hidden;
-    transform:translateY(-8px);
-    transition:visibility 0s linear .25s, transform .25s ease;
     padding:40px var(--gutter);
   }
   nav.main-nav.is-open{
-    visibility:visible;
-    pointer-events:auto;
-    transform:translateY(0);
-    transition:transform .25s ease;
+    display:flex;
+    align-items:flex-start;
   }
-  nav.main-nav ul{flex-direction:column;gap:28px;}
+  nav.main-nav ul{flex-direction:column;gap:28px;width:100%;}
   nav.main-nav a{
     font-size:22px;font-family:var(--serif);
     color:#ffffff;
