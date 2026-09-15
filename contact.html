@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>contact. | Sen</title>
+<meta name="description" content="株式会社Senへのお問い合わせはこちらから。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="index.html"><span class="logo-mark"><span class="logo-s">S</span><span class="logo-en">en</span></span><span class="sub">DOCUMENTARY FILM</span></a>
+    <button class="nav-toggle" aria-label="メニュー"><span></span><span></span><span></span></button>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="works.html">works.</a></li>
+        <li><a href="about.html">about.</a></li>
+        <li><a href="director.html">director.</a></li>
+        <li><a href="https://note.com/" target="_blank" rel="noopener">note.</a></li>
+        <li><a href="contact.html" class="is-active">contact.</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">CONTACT</p>
+      <h1 style="margin-bottom:12px;">お問い合わせ</h1>
+      <p class="lead en" style="margin-bottom:56px;">Get in touch</p>
+
+      <div class="contact-layout">
+        <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-row">
+            <label for="name">お名前 <span class="en">/ Name</span></label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-row">
+            <label for="email">メールアドレス <span class="en">/ Email</span></label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-row">
+            <label for="company">会社名（任意） <span class="en">/ Company (optional)</span></label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="form-row">
+            <label for="message">お問い合わせ内容 <span class="en">/ Message</span></label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">送信する / Send</button>
+          <p id="form-status" class="form-status"></p>
+        </form>
+
+        <div class="contact-info">
+          <h3>Sen</h3>
+          <p>〒150-0041</p>
+          <p>東京都渋谷区神南1丁目11-4<br>FPGリンクス神南 5階</p>
+          <p class="en">5F FPG Links Jinnan, 1-11-4 Jinnan,<br>Shibuya-ku, Tokyo 150-0041, Japan</p>
+          <hr class="line-rule">
+          <p>お仕事のご相談・お見積りなど、お気軽にお問い合わせください。内容を確認のうえ、担当より折り返しご連絡いたします。</p>
+          <p class="en">Feel free to reach out about project inquiries or quotes. We'll review your message and get back to you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Sen</h3>
+        <p>〒150-0041</p>
+        <p>東京都渋谷区神南1丁目11-4<br>FPGリンクス神南 5階</p>
+      </div>
+      <div class="footer-col">
+        <h3>Menu</h3>
+        <a href="works.html">works.</a>
+        <a href="about.html">about.</a>
+        <a href="director.html">director.</a>
+        <a href="https://note.com/" target="_blank" rel="noopener">note.</a>
+        <a href="contact.html">contact.</a>
+      </div>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <a href="contact.html">お問い合わせフォーム</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 株式会社Sen</span>
+      <span>Documentary Filmmaking, Tokyo</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
