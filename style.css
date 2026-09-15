@@ -322,10 +322,13 @@ p.en{padding-top:2px;}
   .nav-toggle.is-open span{background:var(--ink);}
   nav.main-nav{
     display:none;
-    position:fixed;top:76px;left:0;right:0;bottom:0;
+    position:fixed;top:76px;left:0;right:0;
+    height:calc(100vh - 76px);
+    height:calc(100dvh - 76px);
     z-index:100;
     background:var(--ink);
     padding:40px var(--gutter);
+    overflow-y:auto;
   }
   nav.main-nav.is-open{
     display:flex;
