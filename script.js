@@ -15,23 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---- works: click thumbnail to load embed (YouTube or Vimeo) ----
+  // ---- works: click thumbnail to load embed ----
   document.querySelectorAll('.work-media').forEach(media => {
     media.addEventListener('click', () => {
       const ytId = media.getAttribute('data-yt');
-      const vimeoId = media.getAttribute('data-vimeo');
-      const vimeoHash = media.getAttribute('data-vimeo-hash');
-      if (!ytId && !vimeoId) return; // 動画IDが未設定の場合は何もしない
+      if (!ytId) return; // 動画IDが未設定の場合は何もしない
       const iframe = document.createElement('iframe');
-      if (ytId) {
-        iframe.src = `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`;
-      } else {
-        const hashParam = vimeoHash ? `&h=${vimeoHash}` : '';
-        iframe.src = `https://player.vimeo.com/video/${vimeoId}?autoplay=1&badge=0&autopause=0&player_id=0&app_id=58479${hashParam}`;
-        iframe.allow = 'autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share';
-        iframe.referrerPolicy = 'strict-origin-when-cross-origin';
-      }
-      iframe.allow = iframe.allow || 'autoplay; encrypted-media; picture-in-picture';
+      iframe.src = `https://www.youtube.com/embed/${ytId}?autoplay=1&rel=0`;
+      iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
       iframe.allowFullscreen = true;
       media.innerHTML = '';
       media.appendChild(iframe);
